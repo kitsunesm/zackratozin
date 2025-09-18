@@ -1,0 +1,104 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loja de Ratinhos</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #f5f0e6; /* marrom bem clarinho */
+      color: #4b3a2f; /* marrom escuro */
+    }
+
+    header {
+      background-color: #7b5e57; /* marrom médio */
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    main {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      padding: 30px;
+    }
+
+    .card {
+      background-color: #fffaf5;
+      border: 2px solid #d2b48c;
+      border-radius: 12px;
+      box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+      text-align: center;
+      padding: 15px;
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .price {
+      margin-top: 10px;
+      font-size: 18px;
+      color: #7b5e57;
+      font-weight: bold;
+    }
+
+    button {
+      margin-top: 10px;
+      padding: 8px 15px;
+      border: none;
+      border-radius: 8px;
+      background-color: #7b5e57;
+      color: white;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    button:hover {
+      background-color: #5c443f;
+    }
+  </style>
+</head>
+<body>
+  <header>🐭 Loja de Ratinhos Fofos 🐭</header>
+
+  <main>
+    <div class="card">
+      <img src="https://placekitten.com/200/200" alt="Ratinho 1">
+      <h3>Ratinho Albino</h3>
+      <p class="price">R$ 49,90</p>
+      <button>Comprar</button>
+    </div>
+
+    <div class="card">
+      <img src="https://placekitten.com/210/200" alt="Ratinho 2">
+      <h3>Ratinho Marronzinho</h3>
+      <p class="price">R$ 59,90</p>
+      <button>Comprar</button>
+    </div>
+
+    <div class="card">
+      <img src="https://placekitten.com/220/200" alt="Ratinho 3">
+      <h3>Ratinho Cinza</h3>
+      <p class="price">R$ 39,90</p>
+      <button>Comprar</button>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
