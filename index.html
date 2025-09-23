@@ -4,30 +4,35 @@
   <meta charset="UTF-8">
   <title>Cadastro</title>
   <style>
-    body {
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
       font-family: Arial, sans-serif;
+    }
+
+    body {
       background: #f5f5f5;
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
-      margin: 0;
+      color: #202124;
     }
 
     .container {
       background: #fff;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      width: 350px;
+      padding: 32px;
+      border-radius: 8px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+      width: 360px;
     }
 
     h2 {
-      font-size: 20px;
-      font-weight: 500;
-      margin-bottom: 20px;
+      font-size: 24px;
+      font-weight: 400;
+      margin-bottom: 24px;
       text-align: center;
-      color: #202124;
     }
 
     input {
@@ -35,7 +40,7 @@
       padding: 12px;
       margin-bottom: 10px;
       border: 1px solid #dadce0;
-      border-radius: 5px;
+      border-radius: 4px;
       font-size: 14px;
     }
 
@@ -49,7 +54,9 @@
       font-size: 12px;
       color: #5f6368;
       margin-top: -5px;
-      margin-bottom: 15px;
+      margin-bottom: 20px;
+      line-height: 1.4;
+      display: none; /* começa escondido */
     }
 
     button {
@@ -57,11 +64,12 @@
       padding: 12px;
       background: #1a73e8;
       border: none;
-      border-radius: 5px;
+      border-radius: 4px;
       color: white;
       font-size: 14px;
+      font-weight: 500;
       cursor: pointer;
-      transition: background 0.3s;
+      transition: background 0.2s;
     }
 
     button:hover {
@@ -72,20 +80,35 @@
 <body>
   <div class="container">
     <h2>Criar conta</h2>
-   <form>
-  <input type="text" placeholder="Nome completo" required>
-  <input type="email" placeholder="Email" required>
+    <form>
+      <input type="text" placeholder="Nome completo" required>
+      <input type="email" placeholder="Email" required>
 
-  <!-- Campo de senha -->
-  <input type="password" placeholder="Senha" required>
-  <div class="senha-info">
-    Use 8 ou mais caracteres com uma combinação de letras, números e símbolos
+      <!-- Campo de senha -->
+      <input type="password" id="senha" placeholder="Senha" required>
+      <div class="senha-info" id="senha-info"></div>
+
+      <button type="button" onclick="window.location.href='ratos.html'">Cadastrar</button>
+    </form>
   </div>
 
-  <button type="button" onclick="window.location.href='ratos.html'">Cadastrar</button>
-</form>
+  <script>
+    function gerarSenha() {
+      const chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%&*";
+      let senha = "";
+      for (let i = 0; i < 12; i++) {
+        senha += chars.charAt(Math.floor(Math.random() * chars.length));
+      }
+      return senha;
+    }
 
-  </div>
+    const senhaInput = document.getElementById("senha");
+    const senhaInfo = document.getElementById("senha-info");
+
+    senhaInput.addEventListener("focus", () => {
+      senhaInfo.style.display = "block";
+      senhaInfo.textContent = "Sugestão de senha forte: " + gerarSenha();
+    });
+  </script>
 </body>
 </html>
-
