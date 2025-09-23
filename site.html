@@ -1,104 +1,103 @@
-<!-- index.html -->
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Loja de Ratinhos</title>
+  <title>Ratinhos fofos</title>
   <style>
-    body {
+    * {
       margin: 0;
-      font-family: 'Arial', sans-serif;
-      background-color: #f5f0e6; /* marrom bem clarinho */
-      color: #4b3a2f; /* marrom escuro */
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
     }
 
-    header {
-      background-color: #7b5e57; /* marrom médio */
-      color: white;
+    body {
+      background: #f5f5f5;
+      padding: 40px;
+      color: #202124;
+    }
+
+    h1 {
       text-align: center;
-      padding: 20px;
-      font-size: 24px;
-      font-weight: bold;
+      font-size: 26px;
+      font-weight: 500;
+      margin-bottom: 40px;
     }
 
-    main {
+    .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 20px;
-      padding: 30px;
+      max-width: 1000px;
+      margin: 0 auto;
     }
 
     .card {
-      background-color: #fffaf5;
-      border: 2px solid #d2b48c;
-      border-radius: 12px;
-      box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
-      text-align: center;
-      padding: 15px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+      overflow: hidden;
       transition: transform 0.2s;
     }
 
     .card:hover {
-      transform: scale(1.05);
+      transform: translateY(-5px);
     }
 
     .card img {
       width: 100%;
-      height: 150px;
+      height: 180px;
       object-fit: cover;
-      border-radius: 10px;
+      display: block;
     }
 
-    .price {
-      margin-top: 10px;
-      font-size: 18px;
-      color: #7b5e57;
-      font-weight: bold;
+    .card p {
+      padding: 10px;
+      text-align: center;
+      font-size: 14px;
+      color: #5f6368;
     }
 
-    button {
-      margin-top: 10px;
-      padding: 8px 15px;
-      border: none;
-      border-radius: 8px;
-      background-color: #7b5e57;
-      color: white;
-      cursor: pointer;
+    .voltar {
+      display: block;
+      width: 200px;
+      margin: 30px auto 0;
+      text-align: center;
+      background: #1a73e8;
+      color: #fff;
+      padding: 12px;
+      border-radius: 6px;
+      text-decoration: none;
       transition: background 0.2s;
     }
 
-    button:hover {
-      background-color: #5c443f;
+    .voltar:hover {
+      background: #1558b0;
     }
   </style>
 </head>
 <body>
-  <header>🐭 Loja de Ratinhos Fofos 🐭</header>
+  <h1>🐭 Ratinhos fofos</h1>
 
-  <main>
+  <div class="grid">
     <div class="card">
-      <img src="https://placekitten.com/200/200" alt="Ratinho 1">
-      <h3>Ratinho Albino</h3>
-      <p class="price">R$ 49,90</p>
-      <button>Comprar</button>
+      <img src="https://placekitten.com/300/200" alt="Ratinho fofo 1">
+      <p>Ratinho curioso</p>
     </div>
-
     <div class="card">
-      <img src="https://placekitten.com/210/200" alt="Ratinho 2">
-      <h3>Ratinho Marronzinho</h3>
-      <p class="price">R$ 59,90</p>
-      <button>Comprar</button>
+      <img src="https://placekitten.com/301/200" alt="Ratinho fofo 2">
+      <p>Ratinho brincalhão</p>
     </div>
-
     <div class="card">
-      <img src="https://placekitten.com/220/200" alt="Ratinho 3">
-      <h3>Ratinho Cinza</h3>
-      <p class="price">R$ 39,90</p>
-      <button>Comprar</button>
+      <img src="https://placekitten.com/302/200" alt="Ratinho fofo 3">
+      <p>Ratinho dorminhoco</p>
     </div>
-  </main>
+    <div class="card">
+      <img src="https://placekitten.com/303/200" alt="Ratinho fofo 4">
+      <p>Ratinho comendo queijo</p>
+    </div>
+  </div>
 
-  <script src="script.js"></script>
+  <a href="index.html" class="voltar">Voltar ao cadastro</a>
 </body>
 </html>
