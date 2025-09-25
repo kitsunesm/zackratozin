@@ -13,15 +13,26 @@
 
     body {
       background: #f5f5f5;
-      padding: 40px;
       color: #202124;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background: #1a73e8;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 22px;
+      font-weight: bold;
     }
 
     h1 {
       text-align: center;
       font-size: 26px;
       font-weight: 500;
-      margin-bottom: 40px;
+      margin: 30px 0;
     }
 
     .grid {
@@ -30,6 +41,7 @@
       gap: 20px;
       max-width: 1000px;
       margin: 0 auto;
+      flex: 1;
     }
 
     .card {
@@ -51,17 +63,27 @@
       display: block;
     }
 
-    .card p {
-      padding: 10px;
+    .card .info {
+      padding: 12px;
       text-align: center;
+    }
+
+    .card .info p {
+      margin: 6px 0;
       font-size: 14px;
       color: #5f6368;
+    }
+
+    .card .info .preco {
+      font-size: 16px;
+      font-weight: bold;
+      color: #1a73e8;
     }
 
     .voltar {
       display: block;
       width: 200px;
-      margin: 30px auto 0;
+      margin: 30px auto;
       text-align: center;
       background: #1a73e8;
       color: #fff;
@@ -74,30 +96,58 @@
     .voltar:hover {
       background: #1558b0;
     }
+
+    footer {
+      background: #202124;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+    }
   </style>
 </head>
 <body>
-  <h1>\Loja de ratinhos</h1>
+  <header>
+    🐭 Loja de Ratinhos 🐭
+  </header>
+
+  <h1>Modelos disponíveis</h1>
 
   <div class="grid">
     <div class="card">
-      <img src="https://th.bing.com/th/id/OIP.f5odmM-JYgggdDvy-yUzagHaE7?w=249&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" alt="Modelo 1 R$5000,00">
-      <p>Ratinho comilão</p>
+      <img src="https://th.bing.com/th/id/OIP.f5odmM-JYgggdDvy-yUzagHaE7?w=249&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" alt="Ratinho comilão">
+      <div class="info">
+        <p>Ratinho comilão</p>
+        <p class="preco">R$ 5.000,00</p>
+      </div>
     </div>
     <div class="card">
-      <img src="https://tse1.mm.bing.net/th/id/OIP.g1LyMhRCA-QpMlgcZGqmnAHaEu?w=1200&h=765&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Modelo 2 R$ 6630,00">
-      <p>Ratinho dev</p>
+      <img src="https://tse1.mm.bing.net/th/id/OIP.g1LyMhRCA-QpMlgcZGqmnAHaEu?w=1200&h=765&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Ratinho dev">
+      <div class="info">
+        <p>Ratinho dev</p>
+        <p class="preco">R$ 6.630,00</p>
+      </div>
     </div>
     <div class="card">
-      <img src="https://tse1.mm.bing.net/th/id/OIP.KXZSh-oR9aOjDjIpGNKyCgHaFD?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Modelo 3 R$3500,90">
-      <p>Ratinho dorminhoco</p>
+      <img src="https://tse1.mm.bing.net/th/id/OIP.KXZSh-oR9aOjDjIpGNKyCgHaFD?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Ratinho dorminhoco">
+      <div class="info">
+        <p>Ratinho dorminhoco</p>
+        <p class="preco">R$ 3.500,90</p>
+      </div>
     </div>
     <div class="card">
-      <img src="https://tse2.mm.bing.net/th/id/OIP.SBAscTErA48FLPmbpWO4eQAAAA?w=385&h=385&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Moodelo 4 R$100000000,00">
-      <p>Ratinho cozinheiro</p>
+      <img src="https://tse2.mm.bing.net/th/id/OIP.SBAscTErA48FLPmbpWO4eQAAAA?w=385&h=385&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Ratinho cozinheiro">
+      <div class="info">
+        <p>Ratinho cozinheiro</p>
+        <p class="preco">R$ 100.000.000,00</p>
+      </div>
     </div>
   </div>
 
   <a href="index.html" class="voltar">Voltar ao cadastro</a>
+
+  <footer>
+    © 2025 Loja de Ratinhos. Todos os direitos reservados.
+  </footer>
 </body>
 </html>
